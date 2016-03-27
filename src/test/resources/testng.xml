@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Tests" verbose="5" data-provider-thread-count="1">
 	<test name="Test1">
-		<parameter name="path" value="/"/>
+		<parameter name="path" value="/"></parameter>
 		<classes>
-		    <class name="Sipacheva.HomePageTest"/>
+		    <class name="Sipacheva.LoginTest"/>
 		</classes>
 	</test>  
 </suite>
