@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="9669" started-at="2016-03-27T21:59:04Z" finished-at="2016-03-27T21:59:13Z">
+  <suite name="Tests" duration-ms="10640" started-at="2016-03-28T20:08:13Z" finished-at="2016-03-28T20:08:24Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="9669" started-at="2016-03-27T21:59:04Z" finished-at="2016-03-27T21:59:13Z">
+    <test name="Test1" duration-ms="10640" started-at="2016-03-28T20:08:13Z" finished-at="2016-03-28T20:08:24Z">
       <class name="Sipacheva.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.LoginTest@3796751b]" name="init" is-config="true" duration-ms="7181" started-at="2016-03-28T00:59:04Z" finished-at="2016-03-28T00:59:11Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.LoginTest@3796751b]" name="init" is-config="true" duration-ms="6814" started-at="2016-03-28T23:08:13Z" finished-at="2016-03-28T23:08:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:Sipacheva.LoginTest@3796751b]" name="testUntitled" duration-ms="2477" started-at="2016-03-28T00:59:11Z" finished-at="2016-03-28T00:59:13Z">
+        <test-method status="PASS" signature="testUntitled()[pri:0, instance:Sipacheva.LoginTest@3796751b]" name="testUntitled" duration-ms="3816" started-at="2016-03-28T23:08:20Z" finished-at="2016-03-28T23:08:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Sipacheva.LoginTest@3796751b]" name="tearDown" is-config="true" duration-ms="896" started-at="2016-03-28T00:59:13Z" finished-at="2016-03-28T00:59:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Sipacheva.LoginTest@3796751b]" name="tearDown" is-config="true" duration-ms="695" started-at="2016-03-28T23:08:24Z" finished-at="2016-03-28T23:08:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
