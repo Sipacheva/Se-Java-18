@@ -5,6 +5,9 @@
 		<parameter name="path" value="/"></parameter>
 		<classes>
 		    <class name="Sipacheva.LoginTest"/>
+		    <class name="Sipacheva.Add_movie_true"/>
+		    <class name="Sipacheva.Add_movie_false"/>
+		    <class name="Sipacheva.Delete_movie"/>
 		</classes>
 	</test>  
 </suite>

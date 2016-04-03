@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9218" started-at="2016-03-27T21:43:26Z" finished-at="2016-03-27T21:43:35Z">
+  <suite name="Tests" duration-ms="13307" started-at="2016-04-03T23:07:59Z" finished-at="2016-04-03T23:08:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9218" started-at="2016-03-27T21:43:26Z" finished-at="2016-03-27T21:43:35Z">
+    <test name="Test1" duration-ms="13307" started-at="2016-04-03T23:07:59Z" finished-at="2016-04-03T23:08:12Z">
       <class name="Sipacheva.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.LoginTest@685cb137]" name="init" is-config="true" duration-ms="7745" started-at="2016-03-28T00:43:26Z" finished-at="2016-03-28T00:43:33Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.LoginTest@13deb50e]" name="init" is-config="true" duration-ms="6635" started-at="2016-04-04T02:07:59Z" finished-at="2016-04-04T02:08:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testUntitled()[pri:0, instance:Sipacheva.LoginTest@685cb137]" name="testUntitled" duration-ms="1460" started-at="2016-03-28T00:43:33Z" finished-at="2016-03-28T00:43:35Z">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:Sipacheva.LoginTest@13deb50e]" name="LoginTest" duration-ms="1975" started-at="2016-04-04T02:08:06Z" finished-at="2016-04-04T02:08:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testUntitled -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Sipacheva.LoginTest@685cb137]" name="tearDown" is-config="true" duration-ms="630" started-at="2016-03-28T00:43:35Z" finished-at="2016-03-28T00:43:36Z">
+        </test-method> <!-- LoginTest -->
+      </class> <!-- Sipacheva.LoginTest -->
+      <class name="Sipacheva.Add_movie_true">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.Add_movie_true@7d9d1a19]" name="init" is-config="true" duration-ms="14" started-at="2016-04-04T02:08:08Z" finished-at="2016-04-04T02:08:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testAddMovieTrue()[pri:0, instance:Sipacheva.Add_movie_true@7d9d1a19]" name="testAddMovieTrue" duration-ms="1332" started-at="2016-04-04T02:08:08Z" finished-at="2016-04-04T02:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMovieTrue -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Sipacheva.Add_movie_true@7d9d1a19]" name="tearDown" is-config="true" duration-ms="706" started-at="2016-04-04T02:08:12Z" finished-at="2016-04-04T02:08:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Sipacheva.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Sipacheva.Add_movie_true -->
+      <class name="Sipacheva.Add_movie_false">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.Add_movie_false@f6c48ac]" name="init" is-config="true" duration-ms="7" started-at="2016-04-04T02:08:09Z" finished-at="2016-04-04T02:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testAddMovieFalse()[pri:0, instance:Sipacheva.Add_movie_false@f6c48ac]" name="testAddMovieFalse" duration-ms="1751" started-at="2016-04-04T02:08:09Z" finished-at="2016-04-04T02:08:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMovieFalse -->
+      </class> <!-- Sipacheva.Add_movie_false -->
+      <class name="Sipacheva.Delete_movie">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.Delete_movie@464bee09]" name="init" is-config="true" duration-ms="8" started-at="2016-04-04T02:08:11Z" finished-at="2016-04-04T02:08:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="testDeleteMovie()[pri:0, instance:Sipacheva.Delete_movie@464bee09]" name="testDeleteMovie" duration-ms="1560" started-at="2016-04-04T02:08:11Z" finished-at="2016-04-04T02:08:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteMovie -->
+      </class> <!-- Sipacheva.Delete_movie -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Tests -->
 </testng-results>

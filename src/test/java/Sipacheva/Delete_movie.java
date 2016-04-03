@@ -10,17 +10,27 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class LoginTest extends TestBase {
+public class Delete_movie extends TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
   @Test
-  public void LoginTest() throws Exception {    driver.get(baseUrl + "/php4dvd/");
-    driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("admin");
-    driver.findElement(By.name("password")).clear();
-    driver.findElement(By.name("password")).sendKeys("admin");
-    driver.findElement(By.name("submit")).click();
+  public void testDeleteMovie() throws Exception {    driver.get(baseUrl + "/php4dvd/#!/sort/name%20asc/");
+    for (int second = 0;; second++) {
+    	if (second >= 60) fail("timeout");
+    	try { if (isElementPresent(By.cssSelector("div.nocover"))) break; } catch (Exception e) {}
+    	Thread.sleep(1000);
+    }
+
+    driver.findElement(By.cssSelector("div.nocover")).click();
+    for (int second = 0;; second++) {
+    	if (second >= 60) fail("timeout");
+    	try { if (isElementPresent(By.cssSelector("img[alt=\"Remove\"]"))) break; } catch (Exception e) {}
+    	Thread.sleep(1000);
+    }
+
+    driver.findElement(By.cssSelector("img[alt=\"Remove\"]")).click();
+    assertTrue(closeAlertAndGetItsText().matches("^Are you sure you want to remove this[\\s\\S]$"));
   }
 
   private boolean isElementPresent(By by) {

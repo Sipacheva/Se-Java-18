@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Default suite]">
+  <parameter name="path" value="/"/>
   <test name="Default test(failed)">
     <classes>
-      <class name="Sipacheva.LoginTest">
+      <class name="Sipacheva.Delete_movie">
         <methods>
           <include name="tearDown"/>
           <include name="init"/>
-          <include name="testUntitled"/>
+          <include name="testDeleteMovie"/>
+        </methods>
+      </class> <!-- Sipacheva.Delete_movie -->
+      <class name="Sipacheva.Add_movie_true">
+        <methods>
+          <include name="init"/>
+        </methods>
+      </class> <!-- Sipacheva.Add_movie_true -->
+      <class name="Sipacheva.LoginTest">
+        <methods>
+          <include name="init"/>
         </methods>
       </class> <!-- Sipacheva.LoginTest -->
+      <class name="Sipacheva.Add_movie_false">
+        <methods>
+          <include name="testAddMovieFalse"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- Sipacheva.Add_movie_false -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
