@@ -8,36 +8,38 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class Add_movie_true extends TestBase {
+public class SearchMovieTrue extends TestBase {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
   @Test
-  public void testAddMovieTrue() throws Exception {    driver.get(baseUrl + "/php4dvd/#!/sort/name%20asc/");
-    driver.findElement(By.cssSelector("div.button img[alt=\"Add movie\"]")).click();
+  public void SearchMovieTrue() throws Exception {    driver.get(baseUrl + "/php4dvd/");
     for (int second = 0;; second++) {
     	if (second >= 60) fail("timeout");
-    	try { if ("Movie information".equals(driver.findElement(By.cssSelector("div.addmovie > h2")).getText())) break; } catch (Exception e) {}
+    	try { if (isElementPresent(By.id("q"))) break; } catch (Exception e) {}
     	Thread.sleep(1000);
     }
 
-    driver.findElement(By.name("name")).clear();
-    driver.findElement(By.name("name")).sendKeys("Test_movie");
-    driver.findElement(By.name("aka")).clear();
-    driver.findElement(By.name("aka")).sendKeys("Test1");
-    driver.findElement(By.name("year")).clear();
-    driver.findElement(By.name("year")).sendKeys("2015");
-    driver.findElement(By.id("text_languages_0")).clear();
-    driver.findElement(By.id("text_languages_0")).sendKeys("Russian");
-    driver.findElement(By.id("submit")).click();
+    driver.findElement(By.id("q")).clear();
+    driver.findElement(By.id("q")).sendKeys("Test_movie");
+    driver.findElement(By.id("q")).sendKeys(Keys.ENTER);
+    
+    WebDriverWait wait = new WebDriverWait(driver, 30);
+    		wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector("#results div.title"))));
+    
+    
+    
     for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("Test_movie (2015)".equals(driver.findElement(By.cssSelector("h2")).getText())) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
+    	if (second >= 300) fail("timeout");
+    	try { if (isElementPresent(By.cssSelector("#results div.title"))) break; } catch (Exception e) {}
+   	    Thread.sleep(1000);
+        }
 
+    assertEquals("Test_movie", driver.findElement(By.cssSelector("#results div.title")).getText());
   }
 
   private boolean isElementPresent(By by) {

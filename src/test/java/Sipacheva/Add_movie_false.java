@@ -28,9 +28,7 @@ public class Add_movie_false extends TestBase {
   	try { if ("Movie information".equals(driver.findElement(By.cssSelector("div.addmovie > h2")).getText())) break; } catch (Exception e) {}
   	Thread.sleep(1000);
   }
-
-
-    
+   
     driver.findElement(By.name("name")).clear();
     driver.findElement(By.name("name")).sendKeys("Test_movie");
     driver.findElement(By.name("aka")).clear();
