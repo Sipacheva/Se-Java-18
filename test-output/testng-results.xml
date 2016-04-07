@@ -2,40 +2,40 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Tests" duration-ms="10127" started-at="2016-04-04T22:37:56Z" finished-at="2016-04-04T22:38:06Z">
+  <suite name="Tests" duration-ms="11290" started-at="2016-04-07T22:14:07Z" finished-at="2016-04-07T22:14:18Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="10127" started-at="2016-04-04T22:37:56Z" finished-at="2016-04-04T22:38:06Z">
+    <test name="Test1" duration-ms="11290" started-at="2016-04-07T22:14:07Z" finished-at="2016-04-07T22:14:18Z">
       <class name="Sipacheva.LoginTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.LoginTest@598067a5]" name="init" is-config="true" duration-ms="6568" started-at="2016-04-05T01:37:56Z" finished-at="2016-04-05T01:38:02Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.LoginTest@598067a5]" name="init" is-config="true" duration-ms="5991" started-at="2016-04-08T01:14:07Z" finished-at="2016-04-08T01:14:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="LoginTest()[pri:0, instance:Sipacheva.LoginTest@598067a5]" name="LoginTest" duration-ms="1866" started-at="2016-04-05T01:38:02Z" finished-at="2016-04-05T01:38:04Z">
+        <test-method status="PASS" signature="LoginTest()[pri:0, instance:Sipacheva.LoginTest@598067a5]" name="LoginTest" duration-ms="2266" started-at="2016-04-08T01:14:13Z" finished-at="2016-04-08T01:14:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginTest -->
       </class> <!-- Sipacheva.LoginTest -->
       <class name="Sipacheva.SearchMovieFalse">
-        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.SearchMovieFalse@31ef45e3]" name="init" is-config="true" duration-ms="9" started-at="2016-04-05T01:38:05Z" finished-at="2016-04-05T01:38:05Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.SearchMovieFalse@31ef45e3]" name="init" is-config="true" duration-ms="7" started-at="2016-04-08T01:14:16Z" finished-at="2016-04-08T01:14:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="SearchMovieFalse()[pri:0, instance:Sipacheva.SearchMovieFalse@31ef45e3]" name="SearchMovieFalse" duration-ms="553" started-at="2016-04-05T01:38:05Z" finished-at="2016-04-05T01:38:06Z">
+        <test-method status="PASS" signature="SearchMovieFalse()[pri:0, instance:Sipacheva.SearchMovieFalse@31ef45e3]" name="SearchMovieFalse" duration-ms="1461" started-at="2016-04-08T01:14:16Z" finished-at="2016-04-08T01:14:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchMovieFalse -->
       </class> <!-- Sipacheva.SearchMovieFalse -->
       <class name="Sipacheva.SearchMovieTrue">
-        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.SearchMovieTrue@53b32d7]" name="init" is-config="true" duration-ms="13" started-at="2016-04-05T01:38:04Z" finished-at="2016-04-05T01:38:04Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:Sipacheva.SearchMovieTrue@53b32d7]" name="init" is-config="true" duration-ms="28" started-at="2016-04-08T01:14:15Z" finished-at="2016-04-08T01:14:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="SearchMovieTrue()[pri:0, instance:Sipacheva.SearchMovieTrue@53b32d7]" name="SearchMovieTrue" duration-ms="1098" started-at="2016-04-05T01:38:04Z" finished-at="2016-04-05T01:38:05Z">
+        <test-method status="PASS" signature="SearchMovieTrue()[pri:0, instance:Sipacheva.SearchMovieTrue@53b32d7]" name="SearchMovieTrue" duration-ms="1519" started-at="2016-04-08T01:14:15Z" finished-at="2016-04-08T01:14:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchMovieTrue -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Sipacheva.SearchMovieTrue@53b32d7]" name="tearDown" is-config="true" duration-ms="544" started-at="2016-04-05T01:38:06Z" finished-at="2016-04-05T01:38:07Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Sipacheva.SearchMovieTrue@53b32d7]" name="tearDown" is-config="true" duration-ms="619" started-at="2016-04-08T01:14:18Z" finished-at="2016-04-08T01:14:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

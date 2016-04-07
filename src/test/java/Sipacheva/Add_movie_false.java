@@ -8,7 +8,9 @@ import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Add_movie_false extends TestBase {
   private boolean acceptNextAlert = true;
@@ -16,11 +18,14 @@ public class Add_movie_false extends TestBase {
 
   @Test
   public void testAddMovieFalse() throws Exception {    driver.get(baseUrl + "/php4dvd/#!/sort/name%20asc/");
-  for (int second = 0;; second++) {
+ 
+  WebDriverWait wait = new WebDriverWait(driver, 30);  
+  wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.button img[alt=\"Add movie\"]")));
+    
+ /* for (int second = 0;; second++) {
   	if (second >= 60) fail("timeout");
   	try { if (isElementPresent(By.cssSelector("div.button img[alt=\"Add movie\"]"))) break; } catch (Exception e) {}
-  	Thread.sleep(1000);
-  }
+  	Thread.sleep(1000);}*/
 
   driver.findElement(By.cssSelector("div.button img[alt=\"Add movie\"]")).click();
   for (int second = 0;; second++) {

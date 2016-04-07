@@ -18,28 +18,21 @@ public class SearchMovieTrue extends TestBase {
 
   @Test
   public void SearchMovieTrue() throws Exception {    driver.get(baseUrl + "/php4dvd/");
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if (isElementPresent(By.id("q"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
+  
+  WebDriverWait wait = new WebDriverWait(driver, 30); 
+  
+  By OldElement = By.cssSelector("#results div.movie_cover");
+  WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(OldElement));
 
-    driver.findElement(By.id("q")).clear();
-    driver.findElement(By.id("q")).sendKeys("Test_movie");
-    driver.findElement(By.id("q")).sendKeys(Keys.ENTER);
-    
-    WebDriverWait wait = new WebDriverWait(driver, 30);
-    		wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector("#results div.title"))));
-    
-    
-    
-    for (int second = 0;; second++) {
-    	if (second >= 300) fail("timeout");
-    	try { if (isElementPresent(By.cssSelector("#results div.title"))) break; } catch (Exception e) {}
-   	    Thread.sleep(1000);
-        }
-
+    WebElement SearchField = driver.findElement(By.id("q"));
+	SearchField.clear();
+    SearchField.sendKeys("Test_movie");
+    SearchField.sendKeys(Keys.ENTER);
+      
+    wait.until(ExpectedConditions.stalenessOf(element));
+    wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#results div.title")));
     assertEquals("Test_movie", driver.findElement(By.cssSelector("#results div.title")).getText());
+    
   }
 
   private boolean isElementPresent(By by) {

@@ -9,9 +9,14 @@
         <methods>
           <include name="tearDown"/>
           <include name="init"/>
-          <include name="SearchMovieTrue"/>
         </methods>
       </class> <!-- Sipacheva.SearchMovieTrue -->
+      <class name="Sipacheva.SearchMovieFalse">
+        <methods>
+          <include name="SearchMovieFalse"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- Sipacheva.SearchMovieFalse -->
       <class name="Sipacheva.LoginTest">
         <methods>
           <include name="init"/>

@@ -18,26 +18,18 @@ public class SearchMovieFalse extends TestBase {
 
   @Test
   public void SearchMovieFalse() throws Exception {    driver.get(baseUrl + "/php4dvd/");
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if (isElementPresent(By.id("q"))) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-
-    driver.findElement(By.id("q")).clear();
-    driver.findElement(By.id("q")).sendKeys("No");
-    driver.findElement(By.id("q")).sendKeys(Keys.ENTER);
-    
-    WebDriverWait wait = new WebDriverWait(driver, 30);
-	wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.cssSelector("#results div.title"))));
-    
-    for (int second = 0;; second++) {
-    	if (second >= 60) fail("timeout");
-    	try { if ("No movies where found.".equals(driver.findElement(By.cssSelector("div.content")).getText())) break; } catch (Exception e) {}
-    	Thread.sleep(1000);
-    }
-    
-    assertFalse(isElementPresent(By.cssSelector("#results div.title")));
+  
+  WebDriverWait wait = new WebDriverWait(driver, 30); 
+  By OldElement = By.cssSelector("#results div.movie_cover");
+  WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(OldElement));
+  
+    WebElement SearchField = driver.findElement(By.id("q"));
+	SearchField.clear();
+    SearchField.sendKeys("No");
+    SearchField.sendKeys(Keys.ENTER);
+        
+    wait.until(ExpectedConditions.stalenessOf(element));
+    wait.until(ExpectedConditions.textToBePresentInElementLocated(By.cssSelector("div.content"),"No movies where found."));  
 
   }
 
